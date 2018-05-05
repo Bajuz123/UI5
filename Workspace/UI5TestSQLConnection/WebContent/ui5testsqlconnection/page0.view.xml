@@ -1,0 +1,36 @@
+<core:View  controllerName="ui5testsqlconnection.page0" 
+  			xmlns="sap.m" 
+  			xmlns:core="sap.ui.core" 
+  			xmlns:mvc="sap.ui.core.mvc" 
+  			xmlns:tnt="sap.tnt"
+  			xmlns:layout="sap.ui.layout"
+			xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="SQL Connection Test">
+		<content>
+			<tnt:ToolHeader>
+			<Button icon="sap-icon://menu2" type="transparent"/>
+			<ToolbarSpacer/>
+			<Text text="SQL Connect"></Text>
+			</tnt:ToolHeader>
+			<Button text="Show Customers" press="getCustomers" />
+			<Table id="Customers" items="/value">
+			<columns>
+			<Column>
+			<Text text="CustomerID" />
+			</Column>
+			<Column>
+			<Text text="CustomerName" />
+			</Column>
+			</columns>
+			<items>
+			<ColumnListItem>
+			<Text text="{CustomerID}"/>
+			<Text text="{CustomerName}"/>
+			</ColumnListItem>
+			</items>
+			</Table>
+
+		</content>				
+		
+	</Page>
+</core:View>
